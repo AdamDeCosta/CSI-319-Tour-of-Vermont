@@ -9,21 +9,23 @@
 import Foundation
 import MapKit
 
-class Sight {
-    var name : String
-    var location : CLLocationCoordinate2D
-    var description : String
+class Sight: NSObject, MKAnnotation {
+    let title : String?
+    let coordinate: CLLocationCoordinate2D
+    let sightDescription: String
     
-    init() {
-        self.name = String()
-        self.location = CLLocationCoordinate2D()
-        self.description = String()
+    init(title: String, coordinate: CLLocationCoordinate2D, sightDescription: String) {
+        self.title = title
+        self.coordinate = coordinate
+        self.sightDescription = sightDescription
+        
+        super.init()
     }
     
-    init(name: String, location: CLLocationCoordinate2D, description: String) {
-        self.name = name
-        self.location = location
-        self.description = description
+    init(title: String) {
+        self.title = title
+        self.coordinate = CLLocationCoordinate2D()
+        self.sightDescription = String()
     }
 }
 
@@ -45,7 +47,7 @@ extension Array where Element == Sight {
                             let tmpName = tmp["Name"] as! String
                             let tmpDescription = tmp["Description"] as! String
                             
-                            let tmpSight = Sight(name: tmpName, location: tmpCoordinate, description: tmpDescription)
+                            let tmpSight = Sight(title: tmpName, coordinate: tmpCoordinate, sightDescription: tmpDescription)
                             
                             self.append(tmpSight)
                         }

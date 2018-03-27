@@ -15,6 +15,8 @@
 		66CF5BA42069A2AE00DAD9F6 /* SightsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CF5BA32069A2AE00DAD9F6 /* SightsTableViewController.swift */; };
 		66CF5BA62069A2C400DAD9F6 /* SightsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CF5BA52069A2C400DAD9F6 /* SightsDetailViewController.swift */; };
 		66CF5BAA2069A71E00DAD9F6 /* ModelSight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CF5BA92069A71E00DAD9F6 /* ModelSight.swift */; };
+		66E862BE206ADD4800A4211F /* ToursTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E862BD206ADD4800A4211F /* ToursTableViewController.swift */; };
+		66E862C0206ADD7B00A4211F /* ModelTour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E862BF206ADD7B00A4211F /* ModelTour.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		66CF5BA32069A2AE00DAD9F6 /* SightsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightsTableViewController.swift; sourceTree = "<group>"; };
 		66CF5BA52069A2C400DAD9F6 /* SightsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightsDetailViewController.swift; sourceTree = "<group>"; };
 		66CF5BA92069A71E00DAD9F6 /* ModelSight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSight.swift; sourceTree = "<group>"; };
+		66E862BD206ADD4800A4211F /* ToursTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursTableViewController.swift; sourceTree = "<group>"; };
+		66E862BF206ADD7B00A4211F /* ModelTour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTour.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		66CF5BA72069A2CA00DAD9F6 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				66E862BC206ADD1800A4211F /* Tours */,
 				661E29AC2069CB6B00BF7A9F /* Sights */,
 			);
 			path = "View Controllers";
@@ -92,9 +97,18 @@
 			isa = PBXGroup;
 			children = (
 				66CF5BA92069A71E00DAD9F6 /* ModelSight.swift */,
+				66E862BF206ADD7B00A4211F /* ModelTour.swift */,
 				661E29AA2069BAEB00BF7A9F /* data.plist */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		66E862BC206ADD1800A4211F /* Tours */ = {
+			isa = PBXGroup;
+			children = (
+				66E862BD206ADD4800A4211F /* ToursTableViewController.swift */,
+			);
+			path = Tours;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +185,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				66CF5B9020699C8B00DAD9F6 /* AppDelegate.swift in Sources */,
+				66E862C0206ADD7B00A4211F /* ModelTour.swift in Sources */,
+				66E862BE206ADD4800A4211F /* ToursTableViewController.swift in Sources */,
 				66CF5BA62069A2C400DAD9F6 /* SightsDetailViewController.swift in Sources */,
 				66CF5BA42069A2AE00DAD9F6 /* SightsTableViewController.swift in Sources */,
 				66CF5BAA2069A71E00DAD9F6 /* ModelSight.swift in Sources */,

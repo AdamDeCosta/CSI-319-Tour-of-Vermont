@@ -11,7 +11,7 @@ import MapKit
 
 class SightsDetailViewController: UIViewController {
     
-    var sight : Sight = Sight()
+    var sight : Sight = Sight(title: "")
     
     @IBOutlet weak var imageSight: UIImageView!
     @IBOutlet weak var mapSight: MKMapView!
@@ -21,21 +21,16 @@ class SightsDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        self.title = sight.title!
+        self.imageSight.image = UIImage(named: sight.title!)
+        self.labelDescription.text = sight.sightDescription
         
-        self.title = sight.name
-        self.imageSight.image = UIImage(named: sight.name)
-        self.labelDescription.text = sight.description
-        
-        let region = MKCoordinateRegionMakeWithDistance(sight.location, 750, 750)
+        let region = MKCoordinateRegionMakeWithDistance(sight.coordinate, 750, 750)
         
         mapSight.setRegion(region, animated: true)
-
+        mapSight.addAnnotation(sight)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

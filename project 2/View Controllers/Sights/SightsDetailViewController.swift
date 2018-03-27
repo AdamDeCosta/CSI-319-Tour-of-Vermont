@@ -16,25 +16,31 @@ class SightsDetailViewController: UIViewController {
     @IBOutlet weak var imageSight: UIImageView!
     @IBOutlet weak var mapSight: MKMapView!
     @IBOutlet weak var labelDescription: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         self.title = sight.name
         self.imageSight.image = UIImage(named: sight.name)
         self.labelDescription.text = sight.description
         
-        let region = MKCoordinateRegionMakeWithDistance(sight.location, 500, 500)
+        let region = MKCoordinateRegionMakeWithDistance(sight.location, 750, 750)
         
         mapSight.setRegion(region, animated: true)
-        // Do any additional setup after loading the view.
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
 
     /*
     // MARK: - Navigation

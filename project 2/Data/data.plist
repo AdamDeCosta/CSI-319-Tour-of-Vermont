@@ -14,6 +14,26 @@
 			<key>Longitude</key>
 			<real>-73.2126244</real>
 		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Red Rocks Park</string>
+			<key>Description</key>
+			<string>Green spot with a public beach &amp; trails for hiking, jogging, snowshoeing &amp; cross-country skiing.</string>
+			<key>Latitude</key>
+			<real>44.4448145</real>
+			<key>Longitude</key>
+			<real>-73.226439</real>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>World&apos;s Tallest Filing Cabinet</string>
+			<key>Description</key>
+			<string>IT IS THE WORLD&apos;S TALLEST FILING CABINET</string>
+			<key>Latitude</key>
+			<real>44.4556781</real>
+			<key>Longitude</key>
+			<real>-73.21698739999999</real>
+		</dict>
 	</array>
 </dict>
 </plist>

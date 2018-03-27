@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Sights</key>
+	<array>
+		<dict>
+			<key>Name</key>
+			<string>Church Street</string>
+			<key>Description</key>
+			<string>Downtown Burlington, Vermont&apos;s award-winning open air mall is a hub of activity where you&apos;ll find historic architecture, year-round festivals, street entertainers, music and over 100 places to shop and dine. We invite you find out about exclusive shopping, dining and events in downtown Burlington as well as to explore the area! All four blocks of the Marketplace are now smoke-free and feature free public Wi-Fi sponsored by Vermont’s only L.L.Bean, located in the Burlington Town Center Mall.</string>
+			<key>Latitude</key>
+			<real>44.4781666</real>
+			<key>Longitude</key>
+			<real>-73.2126244</real>
+		</dict>
+	</array>
+</dict>
+</plist>

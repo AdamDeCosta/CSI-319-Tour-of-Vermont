@@ -11,6 +11,7 @@
 		6624F699206B37E6008565C7 /* ToursDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6624F698206B37E6008565C7 /* ToursDetailViewController.swift */; };
 		6624F69C206B4114008565C7 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6624F69B206B4114008565C7 /* NotesTableViewController.swift */; };
 		6624F69E206B4180008565C7 /* ModelNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6624F69D206B4180008565C7 /* ModelNote.swift */; };
+		66655FB1206BF1A000C6E7BA /* Georgia, Vermont.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 66655FB0206BF1A000C6E7BA /* Georgia, Vermont.mp3 */; };
 		66CF5B9020699C8B00DAD9F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CF5B8F20699C8B00DAD9F6 /* AppDelegate.swift */; };
 		66CF5B9520699C8B00DAD9F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66CF5B9320699C8B00DAD9F6 /* Main.storyboard */; };
 		66CF5B9720699C8B00DAD9F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66CF5B9620699C8B00DAD9F6 /* Assets.xcassets */; };
@@ -27,6 +28,8 @@
 		6624F698206B37E6008565C7 /* ToursDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursDetailViewController.swift; sourceTree = "<group>"; };
 		6624F69B206B4114008565C7 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		6624F69D206B4180008565C7 /* ModelNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelNote.swift; sourceTree = "<group>"; };
+		66655FB0206BF1A000C6E7BA /* Georgia, Vermont.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Georgia, Vermont.mp3"; path = "../../../../../../Downloads/Georgia, Vermont.mp3"; sourceTree = "<group>"; };
+		66655FB2206BF20D00C6E7BA /* Champlain College.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Champlain College.mp4"; path = "../../../../../../Downloads/Champlain College.mp4"; sourceTree = "<group>"; };
 		66CF5B8C20699C8B00DAD9F6 /* project 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66CF5B8F20699C8B00DAD9F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66CF5B9420699C8B00DAD9F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,6 +71,15 @@
 			path = Notes;
 			sourceTree = "<group>";
 		};
+		66655FAF206BF18C00C6E7BA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				66655FB2206BF20D00C6E7BA /* Champlain College.mp4 */,
+				66655FB0206BF1A000C6E7BA /* Georgia, Vermont.mp3 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		66CF5B8320699C8B00DAD9F6 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +99,7 @@
 		66CF5B8E20699C8B00DAD9F6 /* project 2 */ = {
 			isa = PBXGroup;
 			children = (
+				66655FAF206BF18C00C6E7BA /* Resources */,
 				66CF5BA82069A6B600DAD9F6 /* Data */,
 				66CF5BA72069A2CA00DAD9F6 /* View Controllers */,
 				66CF5B8F20699C8B00DAD9F6 /* AppDelegate.swift */,
@@ -113,8 +126,8 @@
 			children = (
 				66CF5BA92069A71E00DAD9F6 /* ModelSight.swift */,
 				66E862BF206ADD7B00A4211F /* ModelTour.swift */,
-				661E29AA2069BAEB00BF7A9F /* data.plist */,
 				6624F69D206B4180008565C7 /* ModelNote.swift */,
+				661E29AA2069BAEB00BF7A9F /* data.plist */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -190,6 +203,7 @@
 				66CF5B9A20699C8B00DAD9F6 /* LaunchScreen.storyboard in Resources */,
 				66CF5B9720699C8B00DAD9F6 /* Assets.xcassets in Resources */,
 				661E29AB2069BAEB00BF7A9F /* data.plist in Resources */,
+				66655FB1206BF1A000C6E7BA /* Georgia, Vermont.mp3 in Resources */,
 				66CF5B9520699C8B00DAD9F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

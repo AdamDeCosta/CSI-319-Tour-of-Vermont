@@ -81,7 +81,21 @@
                     <view key="view" contentMode="scaleToFill" id="XIv-GY-EEK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8D-Un-lTc">
+                                <rect key="frame" x="172" y="489" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playContent:" destination="oAp-6F-1Sd" eventType="touchUpInside" id="AVS-TS-HxT"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zKK-Eu-TAr" firstAttribute="bottom" secondItem="n8D-Un-lTc" secondAttribute="bottom" constant="99" id="By8-Bl-5fK"/>
+                            <constraint firstItem="n8D-Un-lTc" firstAttribute="top" relation="lessThanOrEqual" secondItem="zKK-Eu-TAr" secondAttribute="top" constant="425" id="gdH-1H-wSF"/>
+                            <constraint firstItem="n8D-Un-lTc" firstAttribute="centerX" secondItem="zKK-Eu-TAr" secondAttribute="centerX" id="kxe-Ji-Mj2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zKK-Eu-TAr"/>
                     </view>
                 </viewController>

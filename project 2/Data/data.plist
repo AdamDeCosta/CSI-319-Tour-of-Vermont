@@ -6,15 +6,19 @@
 	<array>
 		<dict>
 			<key>Title</key>
-			<string>Ben &amp; Jerry&apos;s Factory</string>
+			<string>Georgia, Vermont</string>
 			<key>Type</key>
 			<string>Audio</string>
+			<key>URL</key>
+			<string>https://freesound.org/data/previews/11/11863_32690-lq.mp3</string>
 		</dict>
 		<dict>
 			<key>Title</key>
 			<string>Champlain College</string>
 			<key>Type</key>
 			<string>Video</string>
+			<key>URL</key>
+			<string>https://www.youtube.com/embed/kY06_9ccpSc</string>
 		</dict>
 	</array>
 	<key>Sights</key>

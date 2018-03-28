@@ -33,7 +33,16 @@ class ToursTableViewController: UITableViewController {
 
         // Configure the cell...
         
-        cell.textLabel?.text = tours[indexPath.row].title
+        let tour = tours[indexPath.row]
+        
+        cell.textLabel?.text = tour.title
+        
+        switch tour.type {
+        case .audio:
+            cell.imageView?.image = UIImage(named: "audio")
+        default:
+            cell.imageView?.image = UIImage(named: "video")
+        }
 
         return cell
     }
@@ -45,6 +54,12 @@ class ToursTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.destination is ToursDetailViewController {
+            let destination = segue.destination as! ToursDetailViewController
+            
+            destination.tour = tours[(tableView.indexPathForSelectedRow?.row)!]
+        }
     }
 
 

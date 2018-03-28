@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		661E29AB2069BAEB00BF7A9F /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 661E29AA2069BAEB00BF7A9F /* data.plist */; };
+		6624F699206B37E6008565C7 /* ToursDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6624F698206B37E6008565C7 /* ToursDetailViewController.swift */; };
+		6624F69C206B4114008565C7 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6624F69B206B4114008565C7 /* NotesTableViewController.swift */; };
+		6624F69E206B4180008565C7 /* ModelNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6624F69D206B4180008565C7 /* ModelNote.swift */; };
 		66CF5B9020699C8B00DAD9F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CF5B8F20699C8B00DAD9F6 /* AppDelegate.swift */; };
 		66CF5B9520699C8B00DAD9F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66CF5B9320699C8B00DAD9F6 /* Main.storyboard */; };
 		66CF5B9720699C8B00DAD9F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66CF5B9620699C8B00DAD9F6 /* Assets.xcassets */; };
@@ -21,6 +24,9 @@
 
 /* Begin PBXFileReference section */
 		661E29AA2069BAEB00BF7A9F /* data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		6624F698206B37E6008565C7 /* ToursDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursDetailViewController.swift; sourceTree = "<group>"; };
+		6624F69B206B4114008565C7 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
+		6624F69D206B4180008565C7 /* ModelNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelNote.swift; sourceTree = "<group>"; };
 		66CF5B8C20699C8B00DAD9F6 /* project 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66CF5B8F20699C8B00DAD9F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66CF5B9420699C8B00DAD9F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,6 +58,14 @@
 				66CF5BA32069A2AE00DAD9F6 /* SightsTableViewController.swift */,
 			);
 			path = Sights;
+			sourceTree = "<group>";
+		};
+		6624F69A206B40FC008565C7 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				6624F69B206B4114008565C7 /* NotesTableViewController.swift */,
+			);
+			path = Notes;
 			sourceTree = "<group>";
 		};
 		66CF5B8320699C8B00DAD9F6 = {
@@ -87,6 +101,7 @@
 		66CF5BA72069A2CA00DAD9F6 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6624F69A206B40FC008565C7 /* Notes */,
 				66E862BC206ADD1800A4211F /* Tours */,
 				661E29AC2069CB6B00BF7A9F /* Sights */,
 			);
@@ -99,6 +114,7 @@
 				66CF5BA92069A71E00DAD9F6 /* ModelSight.swift */,
 				66E862BF206ADD7B00A4211F /* ModelTour.swift */,
 				661E29AA2069BAEB00BF7A9F /* data.plist */,
+				6624F69D206B4180008565C7 /* ModelNote.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -107,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				66E862BD206ADD4800A4211F /* ToursTableViewController.swift */,
+				6624F698206B37E6008565C7 /* ToursDetailViewController.swift */,
 			);
 			path = Tours;
 			sourceTree = "<group>";
@@ -185,10 +202,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				66CF5B9020699C8B00DAD9F6 /* AppDelegate.swift in Sources */,
+				6624F69C206B4114008565C7 /* NotesTableViewController.swift in Sources */,
 				66E862C0206ADD7B00A4211F /* ModelTour.swift in Sources */,
 				66E862BE206ADD4800A4211F /* ToursTableViewController.swift in Sources */,
 				66CF5BA62069A2C400DAD9F6 /* SightsDetailViewController.swift in Sources */,
 				66CF5BA42069A2AE00DAD9F6 /* SightsTableViewController.swift in Sources */,
+				6624F69E206B4180008565C7 /* ModelNote.swift in Sources */,
+				6624F699206B37E6008565C7 /* ToursDetailViewController.swift in Sources */,
 				66CF5BAA2069A71E00DAD9F6 /* ModelSight.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,17 +9,26 @@
 import Foundation
 
 class Tour {
+    
+    enum TourType {
+        case audio
+        case video
+    }
+    
     let title : String
-    let type: String
+    let type: TourType
+    let url: URL
     
     init() {
         self.title = String()
-        self.type = String()
+        self.type = TourType.audio
+        self.url = URL.init(fileURLWithPath: String())
     }
     
-    init(title: String, type: String) {
+    init(title: String, type: TourType, url: URL) {
         self.title = title
         self.type = type
+        self.url = url
     }
 }
 
@@ -31,13 +40,23 @@ extension Array where Element == Tour {
                 do {
                     if let pList = try PropertyListSerialization.propertyList(from: pListData, options: PropertyListSerialization.ReadOptions(), format: nil) as? Dictionary<String, Any> {
                         
-                        let tmpArr = pList["Tours"] as! Array<Dictionary<String, Any>>
+                        let tmpArr = pList["Tours"] as! Array<Dictionary<String, String>>
                         
                         for tmp in tmpArr {
-                            let tmpTitle = tmp["Title"] as! String
-                            let tmpType = tmp["Type"] as! String
+                            let tmpTitle = tmp["Title"]!
                             
-                            let tmpTour = Tour(title: tmpTitle, type: tmpType)
+                            let tmpType : Tour.TourType = { () -> Tour.TourType in
+                                switch tmp["Type"]! {
+                                case "Audio":
+                                    return .audio
+                                default:
+                                    return .video
+                                }
+                            }()
+                            
+                            let tmpURL = URL(string: tmp["URL"]!)!
+                            
+                            let tmpTour = Tour(title: tmpTitle, type: tmpType, url: tmpURL)
                             
                             self.append(tmpTour)
                         }

@@ -54,9 +54,16 @@ extension Array where Element == Tour {
                                 }
                             }()
                             
-                            let tmpURL = URL(string: tmp["URL"]!)!
+                            let contentPath = Bundle.main.url(forResource: tmpTitle, withExtension: { () -> String in
+                                switch tmpType {
+                                case .audio:
+                                    return "mp3"
+                                case .video:
+                                    return "mp4"
+                                }
+                            }())
                             
-                            let tmpTour = Tour(title: tmpTitle, type: tmpType, url: tmpURL)
+                            let tmpTour = Tour(title: tmpTitle, type: tmpType, url: contentPath!)
                             
                             self.append(tmpTour)
                         }

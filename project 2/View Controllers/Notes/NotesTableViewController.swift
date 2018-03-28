@@ -10,7 +10,7 @@ import UIKit
 
 class NotesTableViewController: UITableViewController {
 
-    
+    //var notes : [Note] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +28,15 @@ class NotesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "noteCell", for: indexPath)
+        
+        //let note = notes[indexPath.row]
+        
+        //cell.textLabel?.text = note.title
 
         return cell
     }

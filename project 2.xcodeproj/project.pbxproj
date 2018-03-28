@@ -13,6 +13,7 @@
 		6624F69E206B4180008565C7 /* ModelNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6624F69D206B4180008565C7 /* ModelNote.swift */; };
 		66278865206C012B0061B524 /* Champlain College.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 66278863206C012B0061B524 /* Champlain College.mp4 */; };
 		66278866206C012B0061B524 /* Georgia, Vermont.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 66278864206C012B0061B524 /* Georgia, Vermont.mp3 */; };
+		66278868206C06990061B524 /* NotesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66278867206C06990061B524 /* NotesDetailViewController.swift */; };
 		66CF5B9020699C8B00DAD9F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CF5B8F20699C8B00DAD9F6 /* AppDelegate.swift */; };
 		66CF5B9520699C8B00DAD9F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66CF5B9320699C8B00DAD9F6 /* Main.storyboard */; };
 		66CF5B9720699C8B00DAD9F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66CF5B9620699C8B00DAD9F6 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		6624F69D206B4180008565C7 /* ModelNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelNote.swift; sourceTree = "<group>"; };
 		66278863206C012B0061B524 /* Champlain College.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Champlain College.mp4"; sourceTree = "<group>"; };
 		66278864206C012B0061B524 /* Georgia, Vermont.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Georgia, Vermont.mp3"; sourceTree = "<group>"; };
+		66278867206C06990061B524 /* NotesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDetailViewController.swift; sourceTree = "<group>"; };
 		66CF5B8C20699C8B00DAD9F6 /* project 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66CF5B8F20699C8B00DAD9F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66CF5B9420699C8B00DAD9F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				6624F69B206B4114008565C7 /* NotesTableViewController.swift */,
+				66278867206C06990061B524 /* NotesDetailViewController.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				66CF5BA62069A2C400DAD9F6 /* SightsDetailViewController.swift in Sources */,
 				66CF5BA42069A2AE00DAD9F6 /* SightsTableViewController.swift in Sources */,
 				6624F69E206B4180008565C7 /* ModelNote.swift in Sources */,
+				66278868206C06990061B524 /* NotesDetailViewController.swift in Sources */,
 				6624F699206B37E6008565C7 /* ToursDetailViewController.swift in Sources */,
 				66CF5BAA2069A71E00DAD9F6 /* ModelSight.swift in Sources */,
 			);

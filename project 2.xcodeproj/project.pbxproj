@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		661A7094206C285E000F97B0 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A7093206C285E000F97B0 /* Item.swift */; };
 		661E29AB2069BAEB00BF7A9F /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 661E29AA2069BAEB00BF7A9F /* data.plist */; };
 		6624F699206B37E6008565C7 /* ToursDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6624F698206B37E6008565C7 /* ToursDetailViewController.swift */; };
 		6624F69C206B4114008565C7 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6624F69B206B4114008565C7 /* NotesTableViewController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		661A7093206C285E000F97B0 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		661E29AA2069BAEB00BF7A9F /* data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		6624F698206B37E6008565C7 /* ToursDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursDetailViewController.swift; sourceTree = "<group>"; };
 		6624F69B206B4114008565C7 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		66CF5BA82069A6B600DAD9F6 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				661A7093206C285E000F97B0 /* Item.swift */,
 				66CF5BA92069A71E00DAD9F6 /* ModelSight.swift */,
 				66E862BF206ADD7B00A4211F /* ModelTour.swift */,
 				6624F69D206B4180008565C7 /* ModelNote.swift */,
@@ -226,6 +229,7 @@
 				66E862BE206ADD4800A4211F /* ToursTableViewController.swift in Sources */,
 				66CF5BA62069A2C400DAD9F6 /* SightsDetailViewController.swift in Sources */,
 				66CF5BA42069A2AE00DAD9F6 /* SightsTableViewController.swift in Sources */,
+				661A7094206C285E000F97B0 /* Item.swift in Sources */,
 				6624F69E206B4180008565C7 /* ModelNote.swift in Sources */,
 				66278868206C06990061B524 /* NotesDetailViewController.swift in Sources */,
 				6624F699206B37E6008565C7 /* ToursDetailViewController.swift in Sources */,

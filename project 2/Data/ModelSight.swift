@@ -9,23 +9,18 @@
 import Foundation
 import MapKit
 
-class Sight: NSObject, MKAnnotation {
-    let title : String?
+class Sight: Item, MKAnnotation {
     let coordinate: CLLocationCoordinate2D
-    let sightDescription: String
     
     init(title: String, coordinate: CLLocationCoordinate2D, sightDescription: String) {
-        self.title = title
         self.coordinate = coordinate
-        self.sightDescription = sightDescription
-        
-        super.init()
+        super.init(title: title, itemDescription: sightDescription)
     }
     
     init(title: String) {
-        self.title = title
         self.coordinate = CLLocationCoordinate2D()
-        self.sightDescription = String()
+        
+        super.init(title: title)
     }
 }
 

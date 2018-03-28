@@ -8,20 +8,18 @@
 
 import UIKit
 
-class Note {
-    var title: String
+class Note: Item {
     var image: String
-    var description: String
     
-    init() {
-        self.title = String()
+    override init() {
         self.image = String()
-        self.description = String()
+        
+        super.init()
     }
     
     init(title: String, image: String, description: String) {
-        self.title = title
         self.image = image
-        self.description = description
+        
+        super.init(title: title, itemDescription: description)
     }
 }

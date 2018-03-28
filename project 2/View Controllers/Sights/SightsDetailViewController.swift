@@ -23,7 +23,7 @@ class SightsDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.title = sight.title!
         self.imageSight.image = UIImage(named: sight.title!)
-        self.labelDescription.text = sight.sightDescription
+        self.labelDescription.text = sight.itemDescription
         
         let region = MKCoordinateRegionMakeWithDistance(sight.coordinate, 750, 750)
         

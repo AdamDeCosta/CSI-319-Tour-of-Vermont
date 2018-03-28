@@ -8,27 +8,28 @@
 
 import Foundation
 
-class Tour {
+class Tour: Item {
     
     enum TourType {
         case audio
         case video
     }
     
-    let title : String
     let type: TourType
     let url: URL
     
-    init() {
-        self.title = String()
+    override init() {
         self.type = TourType.audio
         self.url = URL.init(fileURLWithPath: String())
+        
+        super.init()
     }
     
     init(title: String, type: TourType, url: URL) {
-        self.title = title
         self.type = type
         self.url = url
+        
+        super.init(title: title)
     }
 }
 
@@ -45,23 +46,9 @@ extension Array where Element == Tour {
                         for tmp in tmpArr {
                             let tmpTitle = tmp["Title"]!
                             
-                            let tmpType : Tour.TourType = { () -> Tour.TourType in
-                                switch tmp["Type"]! {
-                                case "Audio":
-                                    return .audio
-                                default:
-                                    return .video
-                                }
-                            }()
+                            let tmpType : Tour.TourType = tmp["Type"] == "Audio" ? .audio : .video
                             
-                            let contentPath = Bundle.main.url(forResource: tmpTitle, withExtension: { () -> String in
-                                switch tmpType {
-                                case .audio:
-                                    return "mp3"
-                                case .video:
-                                    return "mp4"
-                                }
-                            }())
+                            let contentPath = Bundle.main.url(forResource: tmpTitle, withExtension: tmpType == .audio ? "mp3" : "mp4")
                             
                             let tmpTour = Tour(title: tmpTitle, type: tmpType, url: contentPath!)
                             

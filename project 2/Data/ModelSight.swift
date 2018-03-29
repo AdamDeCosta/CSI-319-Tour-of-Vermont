@@ -28,14 +28,15 @@ class Sight: Item, MKAnnotation {
         let longitude = aDecoder.decodeDouble(forKey: "Longitude")
         let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         let sightDescription = aDecoder.decodeObject(forKey: "Description") as! String
+        let itemType = aDecoder.decodeObject(forKey: "Type") as! String
         
-        self.init(title: title, coordinate: coordinate, sightDescription: sightDescription, uuid: uuid)
+        self.init(title: title, coordinate: coordinate, sightDescription: sightDescription, uuid: uuid, itemType: itemType)
     }
     
-    init(title: String, coordinate: CLLocationCoordinate2D, sightDescription: String, uuid: String) {
+    init(title: String, coordinate: CLLocationCoordinate2D, sightDescription: String, uuid: String, itemType: String) {
         self.coordinate = coordinate
         self.sightDescription = sightDescription
-        super.init(title: title, uuid: uuid)
+        super.init(title: title, uuid: uuid, itemType: itemType)
     }
     
     init(title: String) {
@@ -65,8 +66,9 @@ extension Array where Element == Sight {
                             let tmpName = tmp["Name"] as! String
                             let tmpDescription = tmp["Description"] as! String
                             let tmpKey = tmp["Key"] as! String
+                            let tmpType = tmp["Type"] as! String
                             
-                            let tmpSight = Sight(title: tmpName, coordinate: tmpCoordinate, sightDescription: tmpDescription, uuid: tmpKey)
+                            let tmpSight = Sight(title: tmpName, coordinate: tmpCoordinate, sightDescription: tmpDescription, uuid: tmpKey, itemType: tmpType)
                             
                             self.append(tmpSight)
                         }

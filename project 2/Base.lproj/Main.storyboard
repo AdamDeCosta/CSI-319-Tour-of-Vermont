@@ -176,16 +176,6 @@
                                     <action selector="changeImage:" destination="asS-AS-UQk" eventType="touchUpInside" id="9KN-XG-gDV"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Sj4-cp-9CB">
-                                <rect key="frame" x="0.0" y="447.66666666666669" width="414" height="239.33333333333331"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Sj4-cp-9CB" secondAttribute="height" multiplier="375:217" id="eVx-uk-WQb"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFh-K1-RZI">
                                 <rect key="frame" x="20" y="65" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
@@ -197,14 +187,35 @@
                                 <rect key="frame" x="339" y="64" width="55" height="30"/>
                                 <state key="normal" title="Favorite"/>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oPW-ch-2DQ">
+                                <rect key="frame" x="125" y="65" width="164" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oPW-ch-2DQ" secondAttribute="height" multiplier="82:15" id="DPI-tU-RCh"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Sj4-cp-9CB">
+                                <rect key="frame" x="0.0" y="447" width="414" height="239.33333333333331"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Sj4-cp-9CB" secondAttribute="height" multiplier="375:217" id="eVx-uk-WQb"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="oPW-ch-2DQ" firstAttribute="centerX" secondItem="3u0-A3-nvL" secondAttribute="centerX" id="0QC-C7-O69"/>
                             <constraint firstItem="9Vt-81-Zdf" firstAttribute="trailing" secondItem="3u0-A3-nvL" secondAttribute="trailing" id="0ae-ih-1q8"/>
                             <constraint firstItem="3u0-A3-nvL" firstAttribute="trailing" secondItem="fGV-fU-BL2" secondAttribute="trailing" constant="20" id="1FY-j0-fjx"/>
                             <constraint firstItem="FFh-K1-RZI" firstAttribute="leading" secondItem="3u0-A3-nvL" secondAttribute="leading" constant="20" id="2fF-wj-1Eb"/>
                             <constraint firstItem="Sj4-cp-9CB" firstAttribute="bottom" secondItem="3u0-A3-nvL" secondAttribute="bottom" id="6kp-UL-rIn"/>
                             <constraint firstItem="fGV-fU-BL2" firstAttribute="top" secondItem="3u0-A3-nvL" secondAttribute="top" id="AHu-O9-4SZ"/>
+                            <constraint firstItem="oPW-ch-2DQ" firstAttribute="top" secondItem="3u0-A3-nvL" secondAttribute="top" constant="1" id="AJF-mc-L47"/>
                             <constraint firstItem="9Vt-81-Zdf" firstAttribute="top" secondItem="3u0-A3-nvL" secondAttribute="top" constant="39" id="Clm-1I-jYa"/>
                             <constraint firstItem="sCR-OM-jc3" firstAttribute="top" secondItem="9Vt-81-Zdf" secondAttribute="bottom" constant="10" id="H2P-6Q-GRY"/>
                             <constraint firstItem="Sj4-cp-9CB" firstAttribute="trailing" secondItem="3u0-A3-nvL" secondAttribute="trailing" id="MTb-u7-04j"/>
@@ -219,11 +230,12 @@
                     <connections>
                         <outlet property="noteImage" destination="9Vt-81-Zdf" id="Lz5-ti-Q0b"/>
                         <outlet property="noteText" destination="Sj4-cp-9CB" id="oHW-eI-C77"/>
+                        <outlet property="titleField" destination="oPW-ch-2DQ" id="ZfL-Kf-wnL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTg-md-OM6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4004" y="-526.6866566716642"/>
+            <point key="canvasLocation" x="-4004.347826086957" y="-527.44565217391312"/>
         </scene>
         <!--Links-->
         <scene sceneID="kNF-Xx-ICG">
@@ -252,7 +264,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D5D-nE-inU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4831" y="1003"/>
+            <point key="canvasLocation" x="-4829" y="168"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="FHw-95-gSj">
@@ -281,7 +293,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tk5-Uh-tBk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4831" y="242"/>
+            <point key="canvasLocation" x="-2112" y="-527"/>
         </scene>
         <!--Sights-->
         <scene sceneID="9Ut-9q-3Eh">
@@ -475,7 +487,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbl-Ug-jZt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5644" y="243"/>
+            <point key="canvasLocation" x="-3088" y="-527"/>
         </scene>
         <!--Links-->
         <scene sceneID="ASa-7f-r2F">
@@ -494,7 +506,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9S2-Hc-iod" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5642" y="1003"/>
+            <point key="canvasLocation" x="-5639" y="168"/>
         </scene>
     </scenes>
 </document>

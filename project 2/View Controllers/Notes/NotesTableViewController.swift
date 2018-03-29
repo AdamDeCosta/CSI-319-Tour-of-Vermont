@@ -16,10 +16,14 @@ class NotesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        notesStore.loadNotes()
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,7 +58,7 @@ class NotesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            notesStore.notes.remove(at: indexPath.row)
+            notesStore.removeItem(notesStore.notes[indexPath.row])
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             notesStore.notes.append(Note())
@@ -65,7 +69,7 @@ class NotesTableViewController: UITableViewController {
 
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+        notesStore.moveItem(from: fromIndexPath.row, to: to.row)
     }
 
     /*

@@ -25,6 +25,7 @@
 		66CF5BAA2069A71E00DAD9F6 /* ModelSight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CF5BA92069A71E00DAD9F6 /* ModelSight.swift */; };
 		66E862BE206ADD4800A4211F /* ToursTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E862BD206ADD4800A4211F /* ToursTableViewController.swift */; };
 		66E862C0206ADD7B00A4211F /* ModelTour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E862BF206ADD7B00A4211F /* ModelTour.swift */; };
+		806B688F206D67460076533B /* ModelFavorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806B688E206D67460076533B /* ModelFavorites.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		66CF5BA92069A71E00DAD9F6 /* ModelSight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSight.swift; sourceTree = "<group>"; };
 		66E862BD206ADD4800A4211F /* ToursTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursTableViewController.swift; sourceTree = "<group>"; };
 		66E862BF206ADD7B00A4211F /* ModelTour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTour.swift; sourceTree = "<group>"; };
+		806B688E206D67460076533B /* ModelFavorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFavorites.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				66E862BF206ADD7B00A4211F /* ModelTour.swift */,
 				6624F69D206B4180008565C7 /* ModelNote.swift */,
 				661E29AA2069BAEB00BF7A9F /* data.plist */,
+				806B688E206D67460076533B /* ModelFavorites.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				6624F699206B37E6008565C7 /* ToursDetailViewController.swift in Sources */,
 				66CF5BAA2069A71E00DAD9F6 /* ModelSight.swift in Sources */,
 				6610AD26206C88A80047552C /* ImageStore.swift in Sources */,
+				806B688F206D67460076533B /* ModelFavorites.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

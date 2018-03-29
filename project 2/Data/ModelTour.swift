@@ -32,11 +32,12 @@ class Tour: Item {
     required convenience init(coder aDecoder: NSCoder) {
         let title = aDecoder.decodeObject(forKey: "Title") as! String
         let uuid = aDecoder.decodeObject(forKey: "Key") as! String
-        let type : TourType = aDecoder.decodeObject(forKey: "Type") as! String == "Audio" ? .audio : .video
+        let itemType = aDecoder.decodeObject(forKey: "Type") as! String
+        let type : TourType = itemType == "Audio" ? .audio : .video
         
         let url = Bundle.main.url(forResource: title, withExtension: type == .audio ? "mp3" : "mp4")!
         
-        self.init(title: title, type: type, url: url, uuid: uuid)
+        self.init(title: title, type: type, url: url, uuid: uuid, itemType: itemType)
     }
     override init() {
         self.type = TourType.audio
@@ -45,7 +46,7 @@ class Tour: Item {
         super.init()
     }
     
-    init(title: String, type: TourType, url: URL, uuid: String) {
+    init(title: String, type: TourType, url: URL, uuid: String, itemType: String) {
         self.type = type
         self.url = url
         
@@ -65,11 +66,12 @@ extension Array where Element == Tour {
                         
                         for tmp in tmpArr {
                             let tmpTitle = tmp["Title"]!
-                            let tmpType : Tour.TourType = tmp["Type"] == "Audio" ? .audio : .video
+                            let itemType = tmp["Type"]!
+                            let tmpType : Tour.TourType = itemType == "Audio" ? .audio : .video
                             let contentPath = Bundle.main.url(forResource: tmpTitle, withExtension: tmpType == .audio ? "mp3" : "mp4")
                             let tmpKey = tmp["Key"]!
                             
-                            let tmpTour = Tour(title: tmpTitle, type: tmpType, url: contentPath!, uuid: tmpKey)
+                            let tmpTour = Tour(title: tmpTitle, type: tmpType, url: contentPath!, uuid: tmpKey, itemType: itemType)
                             
                             self.append(tmpTour)
                         }

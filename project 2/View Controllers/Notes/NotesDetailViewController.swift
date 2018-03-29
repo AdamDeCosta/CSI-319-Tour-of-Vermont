@@ -14,12 +14,14 @@ class NotesDetailViewController: UIViewController, UINavigationControllerDelegat
     var notesStore : NotesStore = NotesStore()
     var imageStore : ImageStore = ImageStore()
     
+    @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var noteImage: UIImageView!
     @IBOutlet weak var noteText: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        titleField.text = note.title
         noteText.text = note.text
         noteImage.image = imageStore.image(forKey: note.uuid)
         // Do any additional setup after loading the view.
@@ -40,6 +42,7 @@ class NotesDetailViewController: UIViewController, UINavigationControllerDelegat
     
     @IBAction func save(_ sender: UIButton) {
         note.text = noteText.text
+        note.title = titleField.text
         
         if let image = noteImage.image {
             imageStore.setImage(image, forKey: note.uuid)

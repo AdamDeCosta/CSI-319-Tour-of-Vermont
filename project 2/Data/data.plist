@@ -2,6 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Notes</key>
+	<array>
+		<dict>
+			<key>Title</key>
+			<string>Robert</string>
+			<key>Description</key>
+			<string>Loves Pizza</string>
+			<key>Key</key>
+			<string>Robert</string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Daniel</string>
+			<key>Description</key>
+			<string>Hates Pizza</string>
+			<key>Key</key>
+			<string>Daniel</string>
+		</dict>
+	</array>
 	<key>Tours</key>
 	<array>
 		<dict>
@@ -9,12 +28,16 @@
 			<string>Georgia, Vermont</string>
 			<key>Type</key>
 			<string>Audio</string>
+			<key>Key</key>
+			<string>georgia</string>
 		</dict>
 		<dict>
 			<key>Title</key>
 			<string>Champlain College</string>
 			<key>Type</key>
 			<string>Video</string>
+			<key>Key</key>
+			<string>champlain</string>
 		</dict>
 	</array>
 	<key>Sights</key>
@@ -28,6 +51,8 @@
 			<real>44.4781666</real>
 			<key>Longitude</key>
 			<real>-73.2126244</real>
+			<key>Key</key>
+			<string>churchstreet</string>
 		</dict>
 		<dict>
 			<key>Name</key>
@@ -38,6 +63,8 @@
 			<real>44.4448145</real>
 			<key>Longitude</key>
 			<real>-73.226439</real>
+			<key>Key</key>
+			<string>redrocks</string>
 		</dict>
 		<dict>
 			<key>Name</key>
@@ -48,6 +75,8 @@
 			<real>44.4556781</real>
 			<key>Longitude</key>
 			<real>-73.21698739999999</real>
+			<key>Key</key>
+			<string>filingcabinet</string>
 		</dict>
 	</array>
 </dict>

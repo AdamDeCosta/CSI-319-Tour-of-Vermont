@@ -11,17 +11,40 @@ import MapKit
 
 class Sight: Item, MKAnnotation {
     let coordinate: CLLocationCoordinate2D
+    let sightDescription: String
     
-    init(title: String, coordinate: CLLocationCoordinate2D, sightDescription: String) {
+    override func encode(with aCoder: NSCoder) {
+        aCoder.encode(coordinate.latitude, forKey: "Latitude")
+        aCoder.encode(coordinate.longitude, forKey: "Longitude")
+        aCoder.encode(sightDescription, forKey: "Description")
+        
+        super.encode(with: aCoder)
+    }
+    
+    required convenience init(coder aDecoder: NSCoder) {
+        let title = aDecoder.decodeObject(forKey: "Title") as! String
+        let uuid = aDecoder.decodeObject(forKey: "Key") as! String
+        let latitude = aDecoder.decodeDouble(forKey: "Latitude")
+        let longitude = aDecoder.decodeDouble(forKey: "Longitude")
+        let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        let sightDescription = aDecoder.decodeObject(forKey: "Description") as! String
+        
+        self.init(title: title, coordinate: coordinate, sightDescription: sightDescription, uuid: uuid)
+    }
+    
+    init(title: String, coordinate: CLLocationCoordinate2D, sightDescription: String, uuid: String) {
         self.coordinate = coordinate
-        super.init(title: title, itemDescription: sightDescription)
+        self.sightDescription = sightDescription
+        super.init(title: title, uuid: uuid)
     }
     
     init(title: String) {
         self.coordinate = CLLocationCoordinate2D()
-        
+        self.sightDescription = String()
         super.init(title: title)
     }
+    
+    
 }
 
 extension Array where Element == Sight {
@@ -41,8 +64,9 @@ extension Array where Element == Sight {
                             
                             let tmpName = tmp["Name"] as! String
                             let tmpDescription = tmp["Description"] as! String
+                            let tmpKey = tmp["Key"] as! String
                             
-                            let tmpSight = Sight(title: tmpName, coordinate: tmpCoordinate, sightDescription: tmpDescription)
+                            let tmpSight = Sight(title: tmpName, coordinate: tmpCoordinate, sightDescription: tmpDescription, uuid: tmpKey)
                             
                             self.append(tmpSight)
                         }

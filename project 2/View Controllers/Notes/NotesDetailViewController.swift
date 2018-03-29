@@ -10,18 +10,18 @@ import UIKit
 
 class NotesDetailViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
-    var note : Note? {
-        didSet {
-            noteText.text = note?.description
-        }
-    }
+    var note : Note = Note()
+    var notesStore : NotesStore = NotesStore()
+    var imageStore : ImageStore = ImageStore()
     
     @IBOutlet weak var noteImage: UIImageView!
     @IBOutlet weak var noteText: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        noteText.text = note.text
+        noteImage.image = imageStore.image(forKey: note.uuid)
         // Do any additional setup after loading the view.
     }
 
@@ -36,6 +36,16 @@ class NotesDetailViewController: UIViewController, UINavigationControllerDelegat
         noteImage.image = image
         
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func save(_ sender: UIButton) {
+        note.text = noteText.text
+        
+        if let image = noteImage.image {
+            imageStore.setImage(image, forKey: note.uuid)
+        }
+        
+        notesStore.saveNotes()
     }
     
 

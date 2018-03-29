@@ -8,23 +8,33 @@
 
 import Foundation
 
-class Item: NSObject {
+class Item: NSObject, NSCoding {
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(title, forKey: "Title")
+        aCoder.encode(uuid, forKey: "Key")
+    }
+    
+    required convenience init(coder aDecoder: NSCoder) {
+        let title = aDecoder.decodeObject(forKey: "Title") as! String
+        let uuid = aDecoder.decodeObject(forKey: "Key") as! String
+        
+        self.init(title: title, uuid: uuid)
+    }
+    
     let title: String?
     let uuid: String
-    let itemDescription: String
     
     override init() {
         self.title = String()
         self.uuid = UUID().uuidString
-        self.itemDescription = String()
         
         super.init()
     }
     
-    init(title: String = String(), uuid: String = UUID().uuidString, itemDescription: String = String()) {
+    init(title: String = String(), uuid: String = UUID().uuidString) {
         self.title = title
         self.uuid = uuid
-        self.itemDescription = itemDescription
         
         super.init()
     }

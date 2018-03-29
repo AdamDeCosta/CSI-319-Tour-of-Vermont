@@ -18,6 +18,26 @@ class Tour: Item {
     let type: TourType
     let url: URL
     
+    override func encode(with aCoder: NSCoder) {
+        switch type {
+        case .audio:
+            aCoder.encode("Audio", forKey: "Type")
+        case .video:
+            aCoder.encode("Video", forKey: "Type")
+        }
+        
+        super.encode(with: aCoder)
+    }
+    
+    required convenience init(coder aDecoder: NSCoder) {
+        let title = aDecoder.decodeObject(forKey: "Title") as! String
+        let uuid = aDecoder.decodeObject(forKey: "Key") as! String
+        let type : TourType = aDecoder.decodeObject(forKey: "Type") as! String == "Audio" ? .audio : .video
+        
+        let url = Bundle.main.url(forResource: title, withExtension: type == .audio ? "mp3" : "mp4")!
+        
+        self.init(title: title, type: type, url: url, uuid: uuid)
+    }
     override init() {
         self.type = TourType.audio
         self.url = URL.init(fileURLWithPath: String())
@@ -25,11 +45,11 @@ class Tour: Item {
         super.init()
     }
     
-    init(title: String, type: TourType, url: URL) {
+    init(title: String, type: TourType, url: URL, uuid: String) {
         self.type = type
         self.url = url
         
-        super.init(title: title)
+        super.init(title: title, uuid: uuid)
     }
 }
 
@@ -45,12 +65,11 @@ extension Array where Element == Tour {
                         
                         for tmp in tmpArr {
                             let tmpTitle = tmp["Title"]!
-                            
                             let tmpType : Tour.TourType = tmp["Type"] == "Audio" ? .audio : .video
-                            
                             let contentPath = Bundle.main.url(forResource: tmpTitle, withExtension: tmpType == .audio ? "mp3" : "mp4")
+                            let tmpKey = tmp["Key"]!
                             
-                            let tmpTour = Tour(title: tmpTitle, type: tmpType, url: contentPath!)
+                            let tmpTour = Tour(title: tmpTitle, type: tmpType, url: contentPath!, uuid: tmpKey)
                             
                             self.append(tmpTour)
                         }
@@ -61,4 +80,5 @@ extension Array where Element == Tour {
                 }
             }
         }
-    }}
+    }
+}

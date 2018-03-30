@@ -25,12 +25,14 @@ class Note: Item {
         self.init(title: title, text: text, uuid: uuid)
     }
     
-    init(title: String = "Note", text: String = String(), uuid: String = UUID().uuidString) {
+    init(title: String = "Note", text: String = String(), uuid: String = UUID().uuidString, itemType: String = "Note") {
         self.text = text
         
-        super.init(title: title, uuid: uuid)
+        super.init(title: title, uuid: uuid, itemType: itemType)
     }
 }
+
+// SOURCE: iOS Programming 6th Edition Chapter 16 - Big Nerd Ranch
 
 class NotesStore {
     var notes: [Note] = []
@@ -69,6 +71,7 @@ class NotesStore {
         if let index = notes.index(of: note) {
             notes.remove(at: index)
         }
+        self.saveNotes()
     }
     init() {
         if let archivedItems =

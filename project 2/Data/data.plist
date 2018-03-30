@@ -2,23 +2,31 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Notes</key>
+	<key>Links</key>
 	<array>
 		<dict>
 			<key>Title</key>
-			<string>Robert</string>
-			<key>Description</key>
-			<string>Loves Pizza</string>
+			<string>Dad Feels Good</string>
+			<key>URL</key>
+			<string>https://www.youtube.com/watch?v=fCf-GUYMm94</string>
 			<key>Key</key>
-			<string>Robert</string>
+			<string>dad</string>
 		</dict>
 		<dict>
 			<key>Title</key>
-			<string>Daniel</string>
-			<key>Description</key>
-			<string>Hates Pizza</string>
+			<string>Sausage and Mushroom Pizza</string>
+			<key>URL</key>
+			<string>https://www.youtube.com/watch?v=dKrr-6BxE3Q</string>
 			<key>Key</key>
-			<string>Daniel</string>
+			<string>sausage</string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>guy who likes music</string>
+			<key>URL</key>
+			<string>https://www.youtube.com/watch?v=n3QfRJsF9Pk</string>
+			<key>Key</key>
+			<string>music</string>
 		</dict>
 	</array>
 	<key>Tours</key>

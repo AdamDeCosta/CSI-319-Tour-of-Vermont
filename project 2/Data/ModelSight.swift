@@ -45,7 +45,6 @@ class Sight: Item, MKAnnotation {
         super.init(title: title)
     }
     
-    
 }
 
 extension Array where Element == Sight {

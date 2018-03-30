@@ -68,7 +68,7 @@
                             <outlet property="delegate" destination="5j0-B4-KYO" id="qMX-6U-jp4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="sRv-YP-sfh"/>
+                    <navigationItem key="navigationItem" title="Tours" id="sRv-YP-sfh"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hDw-GX-DcJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,10 +89,19 @@
                                     <action selector="playContent:" destination="oAp-6F-1Sd" eventType="touchUpInside" id="AVS-TS-HxT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBp-1M-fAj">
+                                <rect key="frame" x="339" y="64" width="55" height="30"/>
+                                <state key="normal" title="Favorite"/>
+                                <connections>
+                                    <action selector="addFavorite:" destination="oAp-6F-1Sd" eventType="touchUpInside" id="mtl-Wi-4ki"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zKK-Eu-TAr" firstAttribute="bottom" secondItem="n8D-Un-lTc" secondAttribute="bottom" constant="99" id="By8-Bl-5fK"/>
+                            <constraint firstItem="IBp-1M-fAj" firstAttribute="top" secondItem="zKK-Eu-TAr" secondAttribute="top" id="MXH-U4-Bnx"/>
+                            <constraint firstItem="zKK-Eu-TAr" firstAttribute="trailing" secondItem="IBp-1M-fAj" secondAttribute="trailing" constant="20" id="OQX-q7-EWg"/>
                             <constraint firstItem="n8D-Un-lTc" firstAttribute="top" relation="lessThanOrEqual" secondItem="zKK-Eu-TAr" secondAttribute="top" constant="425" id="gdH-1H-wSF"/>
                             <constraint firstItem="n8D-Un-lTc" firstAttribute="centerX" secondItem="zKK-Eu-TAr" secondAttribute="centerX" id="kxe-Ji-Mj2"/>
                         </constraints>
@@ -138,7 +147,7 @@
                             <outlet property="delegate" destination="rL6-2u-jep" id="tfW-hI-iBc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="S6j-jm-cej">
+                    <navigationItem key="navigationItem" title="Notes" id="S6j-jm-cej">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="1eJ-EQ-E6S">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8ql-rl-kFA">
                                 <rect key="frame" x="20" y="7" width="92" height="30"/>
@@ -186,6 +195,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGV-fU-BL2">
                                 <rect key="frame" x="339" y="64" width="55" height="30"/>
                                 <state key="normal" title="Favorite"/>
+                                <connections>
+                                    <action selector="addFavorite:" destination="asS-AS-UQk" eventType="touchUpInside" id="8i1-SA-szO"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oPW-ch-2DQ">
                                 <rect key="frame" x="125" y="65" width="164" height="30"/>
@@ -197,7 +209,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Sj4-cp-9CB">
-                                <rect key="frame" x="0.0" y="447" width="414" height="239.33333333333331"/>
+                                <rect key="frame" x="0.0" y="446.99999999999994" width="414" height="239.33333333333331"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Sj4-cp-9CB" secondAttribute="height" multiplier="375:217" id="eVx-uk-WQb"/>
@@ -240,13 +252,13 @@
         <!--Links-->
         <scene sceneID="kNF-Xx-ICG">
             <objects>
-                <tableViewController title="Links" id="GlE-0O-Gt9" sceneMemberID="viewController">
+                <tableViewController title="Links" id="GlE-0O-Gt9" customClass="LinksTableViewController" customModule="project_2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ndt-0w-hdf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="2qY-CI-xgX">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="linkCell" id="2qY-CI-xgX">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2qY-CI-xgX" id="2IU-Ms-IrK">
@@ -260,22 +272,81 @@
                             <outlet property="delegate" destination="GlE-0O-Gt9" id="vqM-rc-I41"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="4H3-Tc-R9n"/>
+                    <navigationItem key="navigationItem" title="Links" id="4H3-Tc-R9n">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="eFc-jK-51Z">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FVP-hf-q20">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Credits"/>
+                                <connections>
+                                    <segue destination="OEO-ue-z5y" kind="show" id="32W-1j-koq"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D5D-nE-inU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4829" y="168"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="eDc-IM-V38">
+            <objects>
+                <viewController id="OEO-ue-z5y" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o9J-FK-9xv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vermont Tour Guide" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxG-SQ-J68">
+                                <rect key="frame" x="130.66666666666666" y="114" width="152.99999999999997" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adam DeCosta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9T-SO-EFG">
+                                <rect key="frame" x="149.66666666666666" y="185" width="114.99999999999997" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2hj-M0-lg7">
+                                <rect key="frame" x="87" y="323" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2hj-M0-lg7" secondAttribute="height" multiplier="15:8" id="5Yv-sN-4gV"/>
+                                </constraints>
+                                <string key="text">Credits: My roommate for the links to those wonderful videos. Many stackoverflow code snippets (sourced in code). churchstmarketplace.com and yelp.com for business descriptions.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="S9T-SO-EFG" firstAttribute="centerX" secondItem="MSb-9A-h1w" secondAttribute="centerX" id="7Ob-ym-KDo"/>
+                            <constraint firstItem="SxG-SQ-J68" firstAttribute="centerX" secondItem="MSb-9A-h1w" secondAttribute="centerX" id="9y6-Bt-PPy"/>
+                            <constraint firstItem="2hj-M0-lg7" firstAttribute="top" secondItem="S9T-SO-EFG" secondAttribute="bottom" constant="117" id="BTp-Hp-xLX"/>
+                            <constraint firstItem="2hj-M0-lg7" firstAttribute="centerX" secondItem="MSb-9A-h1w" secondAttribute="centerX" id="BhJ-UM-XBt"/>
+                            <constraint firstItem="S9T-SO-EFG" firstAttribute="top" secondItem="SxG-SQ-J68" secondAttribute="bottom" constant="50" id="Fb5-z3-n5a"/>
+                            <constraint firstItem="MSb-9A-h1w" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="2hj-M0-lg7" secondAttribute="bottom" constant="236" id="QM6-RK-XEE"/>
+                            <constraint firstItem="SxG-SQ-J68" firstAttribute="top" secondItem="MSb-9A-h1w" secondAttribute="top" constant="50" id="ThG-DC-maC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MSb-9A-h1w"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yP3-e2-gD8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4004" y="168"/>
+        </scene>
         <!--Favorites-->
         <scene sceneID="FHw-95-gSj">
             <objects>
-                <tableViewController title="Favorites" id="UfD-hu-F75" sceneMemberID="viewController">
+                <tableViewController title="Favorites" id="UfD-hu-F75" customClass="FavoritesTableViewController" customModule="project_2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pM6-WT-pdO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="VKw-4H-7I3">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" id="VKw-4H-7I3">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VKw-4H-7I3" id="KcW-6a-Mav">
@@ -290,6 +361,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="ruj-Nf-fKQ"/>
+                    <connections>
+                        <segue destination="asS-AS-UQk" kind="show" identifier="notesSegue" id="Mqq-F6-Y7q"/>
+                        <segue destination="oAp-6F-1Sd" kind="show" identifier="toursSegue" id="bNS-tL-MeF"/>
+                        <segue destination="hHh-Qm-FyJ" kind="show" identifier="sightsSegue" id="70s-Sd-NVQ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tk5-Uh-tBk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -368,9 +444,17 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9c-5q-qP0">
+                                                <rect key="frame" x="351" y="8" width="55" height="30"/>
+                                                <state key="normal" title="Favorite"/>
+                                                <connections>
+                                                    <action selector="addFavorite:" destination="hHh-Qm-FyJ" eventType="touchUpInside" id="2rX-OU-JAW"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="y9c-5q-qP0" secondAttribute="trailing" constant="8" id="5cz-Jx-nRG"/>
                                             <constraint firstAttribute="trailing" secondItem="y8g-sw-dlp" secondAttribute="trailing" constant="68" id="BEW-wL-ynh"/>
                                             <constraint firstItem="y8g-sw-dlp" firstAttribute="leading" secondItem="Odf-fr-Y3k" secondAttribute="leading" constant="67" id="ErH-wN-Wf9"/>
                                             <constraint firstItem="y8g-sw-dlp" firstAttribute="top" secondItem="XNF-V6-hNn" secondAttribute="bottom" constant="38" id="FR3-Rk-pBa"/>
@@ -381,6 +465,7 @@
                                             <constraint firstItem="XNF-V6-hNn" firstAttribute="leading" secondItem="Odf-fr-Y3k" secondAttribute="leading" constant="67" id="hgB-cq-Vax"/>
                                             <constraint firstItem="XNF-V6-hNn" firstAttribute="top" secondItem="Odf-fr-Y3k" secondAttribute="top" constant="26" id="pht-bS-th1"/>
                                             <constraint firstAttribute="trailing" secondItem="eeA-0f-YbI" secondAttribute="trailing" constant="40" id="wqO-fl-mQY"/>
+                                            <constraint firstItem="y9c-5q-qP0" firstAttribute="top" secondItem="Odf-fr-Y3k" secondAttribute="top" constant="8" id="zAY-QF-HEM"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -417,7 +502,7 @@
         <scene sceneID="9BS-ce-jxT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ytC-XC-YcO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sights" id="lOm-CR-cP6"/>
+                    <tabBarItem key="tabBarItem" title="Sights" image="Sight" id="lOm-CR-cP6"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H3H-vp-f26">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
@@ -436,7 +521,7 @@
         <scene sceneID="sUU-yk-o0E">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b9T-0a-SW8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tours" id="2Ub-ZN-4GN"/>
+                    <tabBarItem key="tabBarItem" title="Tours" image="Tour" id="2Ub-ZN-4GN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sEy-CC-vRs">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
@@ -455,7 +540,7 @@
         <scene sceneID="eDD-9I-g2Q">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nve-mi-GqK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Notes" id="YoU-T5-Fu5"/>
+                    <tabBarItem key="tabBarItem" title="Notes" image="Note" id="YoU-T5-Fu5"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jpn-k1-3tF">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
@@ -474,7 +559,7 @@
         <scene sceneID="ETK-oo-hrq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dDw-a6-tUK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorite" id="SST-SJ-zHc"/>
+                    <tabBarItem key="tabBarItem" title="Favorite" image="Favorite" id="SST-SJ-zHc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jXi-hN-qlV">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
@@ -493,7 +578,7 @@
         <scene sceneID="ASa-7f-r2F">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gOt-KQ-qbj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Links" id="w7q-Yi-24q"/>
+                    <tabBarItem key="tabBarItem" title="Links" image="Link" id="w7q-Yi-24q"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vRM-wa-ahC">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
@@ -509,4 +594,16 @@
             <point key="canvasLocation" x="-5639" y="168"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Favorite" width="20" height="20"/>
+        <image name="Link" width="20" height="20"/>
+        <image name="Note" width="20" height="20"/>
+        <image name="Sight" width="20" height="20"/>
+        <image name="Tour" width="20" height="20"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="70s-Sd-NVQ"/>
+        <segue reference="O1V-Fz-k5w"/>
+        <segue reference="eW2-LZ-8XG"/>
+    </inferredMetricsTieBreakers>
 </document>

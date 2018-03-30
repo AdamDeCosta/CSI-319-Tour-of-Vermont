@@ -32,12 +32,11 @@ class Tour: Item {
     required convenience init(coder aDecoder: NSCoder) {
         let title = aDecoder.decodeObject(forKey: "Title") as! String
         let uuid = aDecoder.decodeObject(forKey: "Key") as! String
-        let itemType = aDecoder.decodeObject(forKey: "Type") as! String
-        let type : TourType = itemType == "Audio" ? .audio : .video
+        let type : TourType = aDecoder.decodeObject(forKey: "Type") as! String == "Audio" ? .audio : .video
         
         let url = Bundle.main.url(forResource: title, withExtension: type == .audio ? "mp3" : "mp4")!
         
-        self.init(title: title, type: type, url: url, uuid: uuid, itemType: itemType)
+        self.init(title: title, type: type, url: url, uuid: uuid)
     }
     override init() {
         self.type = TourType.audio
@@ -46,11 +45,11 @@ class Tour: Item {
         super.init()
     }
     
-    init(title: String, type: TourType, url: URL, uuid: String, itemType: String) {
+    init(title: String, type: TourType, url: URL, uuid: String, itemType: String = "Tour") {
         self.type = type
         self.url = url
         
-        super.init(title: title, uuid: uuid)
+        super.init(title: title, uuid: uuid, itemType: "Tour")
     }
 }
 

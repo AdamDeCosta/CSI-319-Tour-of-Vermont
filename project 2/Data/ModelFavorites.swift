@@ -32,6 +32,8 @@ class Favorite: NSObject, NSCoding {
     }
 }
 
+// SOURCE: iOS Programming 6th Edition Chapter 16 - Big Nerd Ranch
+
 class FavoritesStore {
     
     var favorites : [Favorite] = []
@@ -60,10 +62,31 @@ class FavoritesStore {
     }
     
     func removeItem(_ favorite: Favorite) {
-        
         if let index = favorites.index(of: favorite) {
             favorites.remove(at: index)
+            self.save()
         }
+    }
+    
+    func removeItem(_ item: Item) {
+        
+        for favorite in favorites {
+            if favorite.uuid == item.uuid {
+                if let index = favorites.index(of: favorite) {
+                    favorites.remove(at: index)
+                    self.save()
+                }
+            }
+        }
+    }
+    
+    func isFavorite(_ item: Item) -> Bool {
+        for favorite in favorites {
+            if item.uuid == favorite.uuid {
+                return true
+            }
+        }
+        return false
     }
     
     func addFavorite(_ item: Item) {

@@ -16,6 +16,9 @@
 		66278865206C012B0061B524 /* Champlain College.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 66278863206C012B0061B524 /* Champlain College.mp4 */; };
 		66278866206C012B0061B524 /* Georgia, Vermont.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 66278864206C012B0061B524 /* Georgia, Vermont.mp3 */; };
 		66278868206C06990061B524 /* NotesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66278867206C06990061B524 /* NotesDetailViewController.swift */; };
+		66434D3B206DB80E000A773A /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66434D3A206DB80E000A773A /* FavoritesTableViewController.swift */; };
+		66434D3E206DD230000A773A /* LinksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66434D3D206DD230000A773A /* LinksTableViewController.swift */; };
+		66434D40206DD27B000A773A /* ModelLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66434D3F206DD27B000A773A /* ModelLink.swift */; };
 		66CF5B9020699C8B00DAD9F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CF5B8F20699C8B00DAD9F6 /* AppDelegate.swift */; };
 		66CF5B9520699C8B00DAD9F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66CF5B9320699C8B00DAD9F6 /* Main.storyboard */; };
 		66CF5B9720699C8B00DAD9F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66CF5B9620699C8B00DAD9F6 /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 		66278863206C012B0061B524 /* Champlain College.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Champlain College.mp4"; sourceTree = "<group>"; };
 		66278864206C012B0061B524 /* Georgia, Vermont.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Georgia, Vermont.mp3"; sourceTree = "<group>"; };
 		66278867206C06990061B524 /* NotesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDetailViewController.swift; sourceTree = "<group>"; };
+		66434D3A206DB80E000A773A /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
+		66434D3D206DD230000A773A /* LinksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksTableViewController.swift; sourceTree = "<group>"; };
+		66434D3F206DD27B000A773A /* ModelLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelLink.swift; sourceTree = "<group>"; };
 		66CF5B8C20699C8B00DAD9F6 /* project 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66CF5B8F20699C8B00DAD9F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66CF5B9420699C8B00DAD9F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -79,6 +85,22 @@
 				66278867206C06990061B524 /* NotesDetailViewController.swift */,
 			);
 			path = Notes;
+			sourceTree = "<group>";
+		};
+		66434D39206DB7DC000A773A /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				66434D3A206DB80E000A773A /* FavoritesTableViewController.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		66434D3C206DD224000A773A /* Links */ = {
+			isa = PBXGroup;
+			children = (
+				66434D3D206DD230000A773A /* LinksTableViewController.swift */,
+			);
+			path = Links;
 			sourceTree = "<group>";
 		};
 		66655FAF206BF18C00C6E7BA /* Resources */ = {
@@ -124,6 +146,8 @@
 		66CF5BA72069A2CA00DAD9F6 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				66434D3C206DD224000A773A /* Links */,
+				66434D39206DB7DC000A773A /* Favorites */,
 				6624F69A206B40FC008565C7 /* Notes */,
 				66E862BC206ADD1800A4211F /* Tours */,
 				661E29AC2069CB6B00BF7A9F /* Sights */,
@@ -139,8 +163,9 @@
 				66CF5BA92069A71E00DAD9F6 /* ModelSight.swift */,
 				66E862BF206ADD7B00A4211F /* ModelTour.swift */,
 				6624F69D206B4180008565C7 /* ModelNote.swift */,
-				661E29AA2069BAEB00BF7A9F /* data.plist */,
+				66434D3F206DD27B000A773A /* ModelLink.swift */,
 				806B688E206D67460076533B /* ModelFavorites.swift */,
+				661E29AA2069BAEB00BF7A9F /* data.plist */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -234,11 +259,14 @@
 				66E862C0206ADD7B00A4211F /* ModelTour.swift in Sources */,
 				66E862BE206ADD4800A4211F /* ToursTableViewController.swift in Sources */,
 				66CF5BA62069A2C400DAD9F6 /* SightsDetailViewController.swift in Sources */,
+				66434D3B206DB80E000A773A /* FavoritesTableViewController.swift in Sources */,
 				66CF5BA42069A2AE00DAD9F6 /* SightsTableViewController.swift in Sources */,
 				661A7094206C285E000F97B0 /* Item.swift in Sources */,
 				6624F69E206B4180008565C7 /* ModelNote.swift in Sources */,
+				66434D40206DD27B000A773A /* ModelLink.swift in Sources */,
 				66278868206C06990061B524 /* NotesDetailViewController.swift in Sources */,
 				6624F699206B37E6008565C7 /* ToursDetailViewController.swift in Sources */,
+				66434D3E206DD230000A773A /* LinksTableViewController.swift in Sources */,
 				66CF5BAA2069A71E00DAD9F6 /* ModelSight.swift in Sources */,
 				6610AD26206C88A80047552C /* ImageStore.swift in Sources */,
 				806B688F206D67460076533B /* ModelFavorites.swift in Sources */,

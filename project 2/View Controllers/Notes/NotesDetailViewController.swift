@@ -13,6 +13,7 @@ class NotesDetailViewController: UIViewController, UINavigationControllerDelegat
     var note : Note = Note()
     var notesStore : NotesStore = NotesStore()
     var imageStore : ImageStore = ImageStore()
+    var favoritesStore : FavoritesStore = FavoritesStore()
     
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var noteImage: UIImageView!
@@ -51,7 +52,7 @@ class NotesDetailViewController: UIViewController, UINavigationControllerDelegat
         notesStore.saveNotes()
     }
     
-
+    // SOURCE: Adapted from Chapter 15 of iOS Programming - Big Nerd Ranch
     @IBAction func changeImage(_ sender: UIButton) {
         let picker = UIImagePickerController()
         
@@ -65,6 +66,13 @@ class NotesDetailViewController: UIViewController, UINavigationControllerDelegat
         
         self.present(picker, animated: true)
     }
+    
+    @IBAction func addFavorite(_ sender: UIButton) {
+        if !favoritesStore.isFavorite(note) {
+            favoritesStore.addFavorite(note)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

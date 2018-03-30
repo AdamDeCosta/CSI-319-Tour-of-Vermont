@@ -24,9 +24,6 @@ class ToursDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // Source: https://stackoverflow.com/questions/25348877/how-to-play-a-local-video-with-swift?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
-    
-
     /*
     // MARK: - Navigation
 
@@ -36,7 +33,15 @@ class ToursDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func addFavorite(_ sender: UIButton) {
+        let favorites = FavoritesStore()
+        
+        if !favorites.isFavorite(tour) {
+            favorites.addFavorite(tour)
+        }
+    }
+    
+    // SOURCE: https://stackoverflow.com/questions/25932570/how-to-play-video-with-avplayerviewcontroller-avkit-in-swift?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
     @IBAction func playContent(_ sender: UIButton) {
         let player = AVPlayer(url: tour.url)
         let playerController = AVPlayerViewController()

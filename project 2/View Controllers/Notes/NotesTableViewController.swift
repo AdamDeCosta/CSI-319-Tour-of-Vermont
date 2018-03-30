@@ -11,7 +11,6 @@ import UIKit
 class NotesTableViewController: UITableViewController {
 
     var notesStore: NotesStore = NotesStore()
-    
     let imageStore : ImageStore = ImageStore()
     
     override func viewDidLoad() {
@@ -44,6 +43,7 @@ class NotesTableViewController: UITableViewController {
         let note = notesStore.notes[indexPath.row]
         
         cell.textLabel?.text = note.title
+        cell.imageView?.image = imageStore.image(forKey: note.uuid)
 
         return cell
     }
@@ -58,7 +58,13 @@ class NotesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            notesStore.removeItem(notesStore.notes[indexPath.row])
+            let note = notesStore.notes[indexPath.row]
+            let favoritesStore: FavoritesStore = FavoritesStore()
+            
+            if favoritesStore.isFavorite(note) {
+                favoritesStore.removeItem(note)
+            }
+            notesStore.removeItem(note)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             notesStore.notes.append(Note())

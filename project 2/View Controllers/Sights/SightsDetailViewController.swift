@@ -36,7 +36,13 @@ class SightsDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func addFavorite(_ sender: UIButton) {
+        let favorites : FavoritesStore = FavoritesStore()
+        if !favorites.isFavorite(sight) {
+            favorites.addFavorite(sight)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
